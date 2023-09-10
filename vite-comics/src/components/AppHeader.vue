@@ -31,7 +31,7 @@ export default {
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   background-color: white;
 }

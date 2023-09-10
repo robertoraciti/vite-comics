@@ -40,11 +40,12 @@ export default {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .azure-sec {
   background-color: #0282f9;
   height: 150px;
   div {
+    z-index: 1;
     height: 100%;
     display: flex;
     justify-content: space-around;
