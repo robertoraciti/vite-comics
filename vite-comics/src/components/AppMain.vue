@@ -88,11 +88,10 @@ export default {
           type: "graphic novel",
         },
       ],
-
-      components: {
-        CardList,
-      },
     };
+  },
+  components: {
+    CardList,
   },
 };
 </script>
@@ -101,44 +100,39 @@ export default {
   <main>
     <section class="container">
       <div class="cards-container">
-        <div class="card" v-for="card in cards">
-          <img :src="card.thumb" alt="" />
-          <p class="title">{{ card.series }}</p>
-        </div>
-        <!-- <CardList
+        <CardList
           v-for="card in cards"
           :key="card.series"
           :thumb="card.thumb"
-        /> -->
+          :series="card.series.toUpperCase(card.series)"
+        />
+      </div>
+      <div class="btn">
+        <button>LOAD MORE</button>
       </div>
     </section>
   </main>
-  <p class="container">...Content Goes Here...</p>
 </template>
 
 <style lang="scss" scoped>
 .cards-container {
   width: 100%;
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.card {
-  width: 15%;
-  height: 200px;
 
-  img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    object-position: top;
-  }
+.btn {
+  text-align: center;
+  margin-top: 50px;
 
-  p {
+  button {
+    background-color: #0282f9;
+    border: none;
     color: white;
-    margin-top: 5px;
-    padding: 0;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
   }
 }
 </style>
