@@ -3,6 +3,7 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AzureSec from "./components/AzureSec.vue";
+import Jumbotron from "./components/Jumbotron.vue";
 
 export default {
   data() {
@@ -16,12 +17,14 @@ export default {
     AppMain,
     AppFooter,
     AzureSec,
+    Jumbotron,
   },
 };
 </script>
 
 <template>
   <AppHeader />
+  <Jumbotron />
   <AppMain />
   <AzureSec />
   <AppFooter />
